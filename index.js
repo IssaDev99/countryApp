@@ -20,8 +20,10 @@ async function countriesDisplay(filteredCountries) {
       (country) =>
         `
        <div class="card">
-         <img src="${country.flags.png}" alt="drapeau ${country.name.common}">
-         <h3>${country.name.common}</h3>
+         <img src="${country.flags.svg}" alt="drapeau ${
+          country.translations.fra.common
+        }">
+         <h3>${country.translations.fra.common}</h3>
          <h4>${country.capital ? country.capital[0] : "Pas de capitale"}</h4>
          <p>Population : ${country.population.toLocaleString()}</p>
        </div>
